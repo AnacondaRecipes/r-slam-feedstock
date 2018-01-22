@@ -10,8 +10,8 @@ package:
 source:
   fn: slam_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/slam_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/slam/slam_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/slam_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/slam/slam_{{ version }}.tar.gz
   sha256: 7206b0189544c9878b83005f80f89626cc2c53cfe3e640aeaa9c3da1f07675df
 
 
