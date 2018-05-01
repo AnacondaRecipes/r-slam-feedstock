@@ -1,4 +1,4 @@
-{% set version = '0.1-42' %}
+{% set version = '0.1-43' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,24 +12,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/slam_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/slam/slam_{{ version }}.tar.gz
-  sha256: 7206b0189544c9878b83005f80f89626cc2c53cfe3e640aeaa9c3da1f07675df
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: b0c866cc529eb7b8c560ec3e945294e924cf934af6346a72ef4e3df6ecc7c443
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
@@ -72,7 +65,7 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: slam
-# Version: 0.1-42
+# Version: 0.1-43
 # Title: Sparse Lightweight Arrays and Matrices
 # Authors@R: c(person("Kurt", "Hornik", role = c("aut", "cre"), email = "Kurt.Hornik@R-project.org", comment = c(ORCID = "0000-0003-4198-9911")), person("David", "Meyer", role = "aut"), person("Christian", "Buchta", role = "aut"))
 # Description: Data structures and algorithms for sparse arrays and matrices, based on index arrays and simple triplet representations, respectively.
@@ -81,11 +74,11 @@ extra:
 # Enhances: Matrix, SparseM, spam
 # License: GPL-2
 # NeedsCompilation: yes
-# Packaged: 2017-12-21 19:55:05 UTC; hornik
-# Author: Kurt Hornik [aut, cre] (0000-0003-4198-9911), David Meyer [aut], Christian Buchta [aut]
+# Packaged: 2018-04-23 04:42:41 UTC; hornik
+# Author: Kurt Hornik [aut, cre] (<https://orcid.org/0000-0003-4198-9911>), David Meyer [aut], Christian Buchta [aut]
 # Maintainer: Kurt Hornik <Kurt.Hornik@R-project.org>
 # Repository: CRAN
-# Date/Publication: 2017-12-21 20:58:52 UTC
+# Date/Publication: 2018-04-23 09:11:30 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
