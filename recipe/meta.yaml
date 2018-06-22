@@ -21,6 +21,7 @@ build:
 
   # This is required to make R link correctly on Linux.
   rpaths:
+    - lib/R/library/slam/libs/
     - lib/R/lib/
     - lib/
 
